@@ -1,0 +1,98 @@
+<h4 class="text-center"> Register to embrace a new world!</h4>
+
+<form [formGroup]="signUpForm" class="form mt-4">
+    <div class="form-group">
+        <input  
+        formControlName="email"
+        placeholder="email" 
+        class="form-control" 
+        autofocus >
+        <ap-vmessage
+            *ngIf="signUpForm.get('email').errors?.required"
+        > 
+            User email is required!!
+        </ap-vmessage>
+        <ap-vmessage
+            *ngIf="signUpForm.get('email').errors?.email"
+        > 
+            User email is invalid!!
+        </ap-vmessage>
+
+    </div>
+
+    <div class="form-group">
+        <input 
+        formControlName="fullName"
+        placeholder="full name" 
+        class="form-control">
+        <ap-vmessage
+            *ngIf="signUpForm.get('fullName').errors?.required"
+        > 
+            User full name is required!!
+        </ap-vmessage>
+        <ap-vmessage
+            *ngIf="signUpForm.get('fullName').errors?.minlength"
+        > 
+            Minimun length is 2 letter!
+        </ap-vmessage>
+        <ap-vmessage
+            *ngIf="signUpForm.get('fullName').errors?.maxlength"
+        > 
+            Maximun length is 40!
+        </ap-vmessage>
+    </div>
+
+    <div class="form-group">
+        <input 
+        formControlName="userName"
+        placeholder="user name" 
+        class="form-control">
+        <ap-vmessage
+            *ngIf="signUpForm.get('userName').errors?.required"
+        > 
+            User name is required!!
+        </ap-vmessage>
+        <ap-vmessage
+            *ngIf="signUpForm.get('userName').errors?.minlength"
+        > 
+            Minimun length is 2!
+        </ap-vmessage>
+        <ap-vmessage
+            *ngIf="signUpForm.get('userName').errors?.maxlength"
+        > 
+            Maximun length is 40!
+        </ap-vmessage>
+        <ap-vmessage
+            *ngIf="signUpForm.get('userName').errors?.pattern"
+        > 
+            Must be lowercase!
+        </ap-vmessage>
+    </div>
+
+    <div class="form-group">
+        <input 
+        formControlName="password"
+        type="password" 
+        placeholder="password" 
+        class="form-control">
+        <ap-vmessage
+            *ngIf="signUpForm.get('password').errors?.required"
+        > 
+            User password is required!
+        </ap-vmessage>
+        <ap-vmessage
+            *ngIf="signUpForm.get('password').errors?.minlength"
+        > 
+            Minimun length is 8 letter!
+        </ap-vmessage>
+        <ap-vmessage
+            *ngIf="signUpForm.get('password').errors?.maxlength"
+        > 
+            Maximun length is 18 letters!
+        </ap-vmessage>
+    </div>
+
+    <button class="btn btn-primary btn-block">Register</button>
+
+    <p>Already a user?<a [routerLink]="['']">Sign In!</a></p>
+</form>
