@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { VMessageModule } from '../shared/components/vmessage/vmessage.mpdule';
+import { HomeComponent } from './home.component';
 import { SignInComponent } from './signin/signin.component';
 import { SignUpComponent } from './signup/signup.component';
 
@@ -10,7 +11,8 @@ import { SignUpComponent } from './signup/signup.component';
 @NgModule({
     declarations:[
         SignInComponent,
-        SignUpComponent
+        SignUpComponent,
+        HomeComponent
     ],
     imports: [ 
         ReactiveFormsModule,
