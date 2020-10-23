@@ -17,12 +17,19 @@ const routes: Routes = [
              {
                 path: '', 
                 component: SignInComponent,
+                data: {
+                    title: 'SignIn'
+                }
              },
              {
                 path: 'signup', 
-                component: SignUpComponent
+                component: SignUpComponent,
+                data: {
+                    title: 'SignUp'
+                }
              },
         ]
+        
     }
 
 ]

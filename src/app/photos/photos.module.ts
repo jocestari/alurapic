@@ -8,6 +8,7 @@ import { PhotoDetailsModule } from './photo-details/photo-details.module';
 
 
 
+
 @NgModule({
     imports: [ 
         PhotoModule, 
