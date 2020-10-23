@@ -1,4 +1,5 @@
 <header class="fixed-top">
+    <ap-loading></ap-loading>
     <nav class="navbar navbar-light bg-white">
         <a class="navbar-brand">ALURAPIC</a>
         <div *ngIf="(user$ | async) as user; else login">
