@@ -9,7 +9,7 @@
         class="form-control" 
         autofocus >
         <ap-vmessage
-            *ngIf="signUpForm.get('email').errors?.required && form.submitted"
+            *ngIf="signUpForm.get('email').errors?.required && (form.submitted || signUpForm.get('email').touched)"
         > 
             User email is required!!
         </ap-vmessage>
@@ -27,7 +27,7 @@
         placeholder="full name" 
         class="form-control">
         <ap-vmessage
-            *ngIf="signUpForm.get('fullName').errors?.required && form.submitted"
+            *ngIf="signUpForm.get('fullName').errors?.required && (form.submitted || signUpForm.get('fullName').touched)"
         > 
             User full name is required!!
         </ap-vmessage>
@@ -49,7 +49,7 @@
         placeholder="user name" 
         class="form-control">
         <ap-vmessage
-            *ngIf="signUpForm.get('userName').errors?.required && form.submitted"
+            *ngIf="signUpForm.get('userName').errors?.required && (form.submitted || signUpForm.get('userName').touched)"
         > 
             User name is required!!
         </ap-vmessage>
@@ -86,7 +86,7 @@
         placeholder="password" 
         class="form-control">
         <ap-vmessage
-            *ngIf="signUpForm.get('password').errors?.required && form.submitted"
+            *ngIf="signUpForm.get('password').errors?.required && (form.submitted || signUpForm.get('password').touched)"
         > 
             User password is required!
         </ap-vmessage>
