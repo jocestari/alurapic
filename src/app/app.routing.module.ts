@@ -7,6 +7,8 @@ import { PhotoFormComponent } from './photos/photo-form/photo-form.component';
 import { PhotoListComponent } from './photos/photo-list/photo-list.component';
 import { PhotoListResolver } from './photos/photo-list/photo-list.resolver';
 import { PhotoDetailsComponent } from './photos/photo-details/photo-details.component';
+import { GlobalErrorHandler } from './errors/global-error-handler/global-error-handler';
+import { GlobalErrorComponent } from './errors/global-error/global-error.component';
 
 const routes: Routes = [
     {
@@ -42,6 +44,13 @@ const routes: Routes = [
         component: PhotoDetailsComponent,
         data: {
             title: 'Photo Detail'
+        }
+    },
+    { 
+        path: 'error',
+        component: GlobalErrorComponent,
+        data: {
+            title: 'Error'
         }
     },
     { 
